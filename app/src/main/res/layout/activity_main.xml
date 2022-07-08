@@ -26,6 +26,20 @@
                 android:textSize="30dp"
                 android:textStyle="bold" />
         </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:text="Ganará quien haga 10 puntos primero"
+                />
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -151,7 +165,11 @@
                 android:onClick="onClick" />
         </LinearLayout>
         <!--Boton salir-->
+        <!--texto informativo-->
+
     </LinearLayout>
+
+
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

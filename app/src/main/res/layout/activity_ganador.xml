@@ -27,7 +27,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/ic_winner" />
+        app:srcCompat="@drawable/ganadorf" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -47,7 +47,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins"
         android:gravity="center"
-        android:text="¡Muchas Felicidades, \n haz ganado!"
+        android:text="¡Muchas Felicidades, \n has ganado!"
         android:textColor="@color/design_default_color_error"
         android:textSize="24dp"
         android:textStyle="bold"
