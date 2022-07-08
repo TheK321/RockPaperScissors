@@ -99,32 +99,15 @@ public class MainActivity extends AppCompatActivity {
 
             if (datoJugador == datoComputer) {
                 Toast.makeText(this, "Empate", Toast.LENGTH_SHORT).show();
-            } else if (datoJugador == 1 && datoComputer == 2) {
+            } else if ( (datoJugador == 1 && datoComputer == 2) || (datoJugador == 2 && datoComputer == 3)  ||  (datoJugador == 3 && datoComputer == 1) )  {
                 //piedra vs papel (gano papel computer)
                 scoreComputer++;
                 tv_scoreComputer.setText("Score: " + String.valueOf(scoreComputer));
-            } else if (datoJugador == 1 && datoComputer == 3) {
+            } else if ( (datoJugador == 1 && datoComputer == 3)  ||  (datoJugador == 2 && datoComputer == 1)  || (datoJugador == 3 && datoComputer == 2) ) {
                 //piedra vs tijera (gano piedra jugador)
                 scoreJugador++;
                 tv_scoreJugador.setText("Score: " + String.valueOf(scoreJugador));
-            } else if (datoJugador == 2 && datoComputer == 3) {
-                //papel vs tijera (gano tijera computer)
-                scoreComputer++;
-                tv_scoreComputer.setText("Score: " + String.valueOf(scoreComputer));
-            } else if (datoJugador == 2 && datoComputer == 1) {
-                //papel vs piedra (gano papel jugador)
-                scoreJugador++;
-                tv_scoreJugador.setText("Score: " + String.valueOf(scoreJugador));
-            } else if (datoJugador == 3 && datoComputer == 1) {
-                //tijera vs piedra (gano piedra computer)
-                scoreComputer++;
-                tv_scoreComputer.setText("Score: " + String.valueOf(scoreComputer));
-            } else if (datoJugador == 3 && datoComputer == 2) {
-                //tijera vs papel (gano tijera de jugadro)
-                scoreJugador++;
-                tv_scoreJugador.setText("Score: " + String.valueOf(scoreJugador));
             }
-            //ejecuto metodo Fin
             Fin();
 
         } catch (Exception e) {
