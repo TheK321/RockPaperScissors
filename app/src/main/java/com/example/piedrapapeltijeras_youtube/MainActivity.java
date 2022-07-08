@@ -46,26 +46,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClick(View view) {
-
-        if (view.getId() == R.id.Piedra) {
-            datoJugador = 1;
-            dataJugador.setImageResource(R.drawable.piedra);
-        } else if (view.getId() == R.id.Papel) {
-            datoJugador = 2;
-            dataJugador.setImageResource(R.drawable.papel);
-        } else if (view.getId() == R.id.Tijera) {
-            datoJugador = 3;
-            dataJugador.setImageResource(R.drawable.tijera);
-        }
-        AleatorioDataComputer();
-        Resultado();
-    }
-
-
-    public void AleatorioDataComputer() {
-        //clase Aleatorio
-        int num_aleatorio = (int) (Math.random() * 3);
-        num_aleatorio = num_aleatorio + 1;
+        //parte de random
+        int num_aleatorio = (int) (Math.random() * 3)+1;
         if (num_aleatorio == 1) {
             dataComputer.setImageResource(R.drawable.piedra2);
             datoComputer = 1;
@@ -76,7 +58,21 @@ public class MainActivity extends AppCompatActivity {
             dataComputer.setImageResource(R.drawable.tijera2);
             datoComputer = 3;
         }
+        //parte de user
+        if (view.getId() == R.id.Piedra) {
+            datoJugador = 1;
+            dataJugador.setImageResource(R.drawable.piedra);
+        } else if (view.getId() == R.id.Papel) {
+            datoJugador = 2;
+            dataJugador.setImageResource(R.drawable.papel);
+        } else if (view.getId() == R.id.Tijera) {
+            datoJugador = 3;
+            dataJugador.setImageResource(R.drawable.tijera);
+        }
+        Resultado();
     }
+
+
 
     //compara quien gana
     public void Resultado() {
