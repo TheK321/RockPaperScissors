@@ -49,17 +49,12 @@ public class MainActivity extends AppCompatActivity {
 
         if (view.getId() == R.id.Piedra) {
             datoJugador = 1;
-            //ejecuto metodo aleatorio de computadora
-            AleatorioDataComputer();
         } else if (view.getId() == R.id.Papel) {
             datoJugador = 2;
-            //ejecuto metodo aleatorio de computadora
-            AleatorioDataComputer();
         } else if (view.getId() == R.id.Tijera) {
             datoJugador = 3;
-            //ejecuto metodo aleatorio de computadora
-            AleatorioDataComputer();
         }
+        AleatorioDataComputer();
     }
 
     //metodo dato jugador
@@ -96,7 +91,6 @@ public class MainActivity extends AppCompatActivity {
     //compara quien gana
     public void Resultado() {
         try {
-
             if (datoJugador == datoComputer) {
                 Toast.makeText(this, "Empate", Toast.LENGTH_SHORT).show();
             } else if ( (datoJugador == 1 && datoComputer == 2) || (datoJugador == 2 && datoComputer == 3)  ||  (datoJugador == 3 && datoComputer == 1) )  {
@@ -109,12 +103,9 @@ public class MainActivity extends AppCompatActivity {
                 tv_scoreJugador.setText("Score: " + String.valueOf(scoreJugador));
             }
             Fin();
-
         } catch (Exception e) {
             Toast.makeText(this, "Error en: " + e, Toast.LENGTH_LONG).show();
         }
-
-
     }
 
     public void Fin() {
