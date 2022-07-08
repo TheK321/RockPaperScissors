@@ -73,11 +73,11 @@ public class MainActivity extends AppCompatActivity {
             } else if ( (datoJugador == 1 && datoComputer == 2) || (datoJugador == 2 && datoComputer == 3)  ||  (datoJugador == 3 && datoComputer == 1) )  {
                 //piedra vs papel (gano papel computer)
                 scoreComputer++;
-                tv_scoreComputer.setText("Score: " + String.valueOf(scoreComputer));
+                tv_scoreComputer.setText("Puntos: " + String.valueOf(scoreComputer));
             } else if ( (datoJugador == 1 && datoComputer == 3)  ||  (datoJugador == 2 && datoComputer == 1)  || (datoJugador == 3 && datoComputer == 2) ) {
                 //piedra vs tijera (gano piedra jugador)
                 scoreJugador++;
-                tv_scoreJugador.setText("Score: " + String.valueOf(scoreJugador));
+                tv_scoreJugador.setText("Puntos: " + String.valueOf(scoreJugador));
             }
             Fin();
         } catch (Exception e) {
