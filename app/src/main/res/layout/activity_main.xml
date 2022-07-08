@@ -69,11 +69,11 @@
                 android:gravity="center"
                 android:orientation="vertical">
 
-                <ImageView
+                <pl.droidsonroids.gif.GifImageView
                     android:id="@+id/DataJugador"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
-                    android:src="@drawable/incognito" />
+                    android:src="@drawable/thinking_emoji" />
 
                 <TextView
                     android:id="@+id/NombreJugador"
@@ -91,11 +91,11 @@
                 android:layout_marginLeft="15dp"
                 android:gravity="center"
                 android:orientation="vertical">
-                <ImageView
+                <pl.droidsonroids.gif.GifImageView
                     android:id="@+id/DataComputer"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
-                    android:src="@drawable/incognito" />
+                    android:src="@drawable/thinking_emoji" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -128,27 +128,27 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="horizontal">
+
             <ImageButton
                 android:id="@+id/Piedra"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:background="@drawable/piedra"
-                android:onClick="onClick"
-                />
+                android:background="@drawable/pie"
+                android:onClick="onClick" />
+
             <ImageButton
                 android:id="@+id/Papel"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:background="@drawable/papel"
-                android:onClick="onClick"
-                />
+                android:background="@drawable/pap"
+                android:onClick="onClick" />
+
             <ImageButton
                 android:id="@+id/Tijera"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:background="@drawable/tijera"
-                android:onClick="onClick"
-                />
+                android:background="@drawable/tij"
+                android:onClick="onClick" />
         </LinearLayout>
         <!--Boton salir-->
     </LinearLayout>
