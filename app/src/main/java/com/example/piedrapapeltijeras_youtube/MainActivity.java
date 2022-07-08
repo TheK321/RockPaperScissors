@@ -42,25 +42,25 @@ public class MainActivity extends AppCompatActivity {
         //parte de random
         int num_aleatorio = (int) (Math.random() * 3)+1;
         if (num_aleatorio == 1) {
-            dataComputer.setImageResource(R.drawable.piedra2);
+            dataComputer.setImageResource(R.drawable.pie);
             datoComputer = 1;
         } else if (num_aleatorio == 2) {
-            dataComputer.setImageResource(R.drawable.papel2);
+            dataComputer.setImageResource(R.drawable.pap);
             datoComputer = 2;
         } else if (num_aleatorio == 3) {
-            dataComputer.setImageResource(R.drawable.tijera2);
+            dataComputer.setImageResource(R.drawable.tij);
             datoComputer = 3;
         }
         //parte de user
         if (view.getId() == R.id.Piedra) {
             datoJugador = 1;
-            dataJugador.setImageResource(R.drawable.piedra);
+            dataJugador.setImageResource(R.drawable.pie);
         } else if (view.getId() == R.id.Papel) {
             datoJugador = 2;
-            dataJugador.setImageResource(R.drawable.papel);
+            dataJugador.setImageResource(R.drawable.pap);
         } else if (view.getId() == R.id.Tijera) {
             datoJugador = 3;
-            dataJugador.setImageResource(R.drawable.tijera);
+            dataJugador.setImageResource(R.drawable.tij);
         }
         Resultado();
     }
