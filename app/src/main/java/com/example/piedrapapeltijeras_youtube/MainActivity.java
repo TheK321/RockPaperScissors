@@ -49,26 +49,18 @@ public class MainActivity extends AppCompatActivity {
 
         if (view.getId() == R.id.Piedra) {
             datoJugador = 1;
+            dataJugador.setImageResource(R.drawable.piedra);
         } else if (view.getId() == R.id.Papel) {
             datoJugador = 2;
+            dataJugador.setImageResource(R.drawable.papel);
         } else if (view.getId() == R.id.Tijera) {
             datoJugador = 3;
-        }
-        AleatorioDataComputer();
-    }
-
-    //metodo dato jugador
-    public void ResultadoJugador() {
-        if (datoJugador == 1) {
-            dataJugador.setImageResource(R.drawable.piedra);
-        } else if (datoJugador == 2) {
-            dataJugador.setImageResource(R.drawable.papel);
-        } else if (datoJugador == 3) {
             dataJugador.setImageResource(R.drawable.tijera);
         }
-
+        AleatorioDataComputer();
         Resultado();
     }
+
 
     public void AleatorioDataComputer() {
         //clase Aleatorio
@@ -84,8 +76,6 @@ public class MainActivity extends AppCompatActivity {
             dataComputer.setImageResource(R.drawable.tijera2);
             datoComputer = 3;
         }
-        //ejecuto el metodo ResultadoJugador
-        ResultadoJugador();
     }
 
     //compara quien gana
