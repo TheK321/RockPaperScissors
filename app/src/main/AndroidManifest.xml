@@ -9,7 +9,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PiedraPapelTijeras_Youtube">
-        <activity android:name=".Login"></activity>
         <activity android:name=".MainActivity" />
         <activity android:name=".Splash">
             <intent-filter>

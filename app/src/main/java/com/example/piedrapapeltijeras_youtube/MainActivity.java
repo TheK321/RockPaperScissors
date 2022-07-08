@@ -47,11 +47,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClick(View view) {
 
-        if (view.getId() == R.id.BtnSalir) {
-            Intent intent = new Intent(this, Login.class);
-            startActivity(intent);
-            finish();
-        } else if (view.getId() == R.id.Piedra) {
+        if (view.getId() == R.id.Piedra) {
             datoJugador = 1;
             //ejecuto metodo aleatorio de computadora
             AleatorioDataComputer();
@@ -141,12 +137,12 @@ public class MainActivity extends AppCompatActivity {
     public void Fin() {
         if (scoreJugador == 10) {
             Toast.makeText(this, "Ganastes " + nombre_jugador + ". Score: " + scoreJugador, Toast.LENGTH_LONG).show();
-            Intent intent = new Intent(this, Login.class);
+            Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
             finish();
         } else if (scoreComputer == 10) {
             Toast.makeText(this, "¡Lo siento perdistes ! " + nombre_jugador + ". gano la Computadora.  Score: " + scoreComputer, Toast.LENGTH_LONG).show();
-            Intent intent = new Intent(this, Login.class);
+            Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
             finish();
         }
