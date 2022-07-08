@@ -11,7 +11,6 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    String nombre_jugador = "";
     int datoJugador = 0;
     int datoComputer = 0;
     private TextView tv_nombreJugador;
@@ -28,12 +27,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         try {
-            //obtener nombre jugador del activity login
-            nombre_jugador = getIntent().getStringExtra("jugador");
-
             this.tv_nombreJugador = findViewById(R.id.NombreJugador);
-            tv_nombreJugador.setText(nombre_jugador);
-
             //casteo
             this.dataJugador = findViewById(R.id.DataJugador);
             this.dataComputer = findViewById(R.id.DataComputer);
@@ -42,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
         } catch (Exception e) {
             Toast.makeText(this, "Error 1 " + e, Toast.LENGTH_LONG).show();
         }
-
     }
 
     public void onClick(View view) {
@@ -72,8 +65,6 @@ public class MainActivity extends AppCompatActivity {
         Resultado();
     }
 
-
-
     //compara quien gana
     public void Resultado() {
         try {
@@ -96,12 +87,12 @@ public class MainActivity extends AppCompatActivity {
 
     public void Fin() {
         if (scoreJugador == 10) {
-            Toast.makeText(this, "Ganastes " + nombre_jugador + ". Score: " + scoreJugador, Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Has ganado" , Toast.LENGTH_LONG).show();
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
             finish();
         } else if (scoreComputer == 10) {
-            Toast.makeText(this, "¡Lo siento perdistes ! " + nombre_jugador + ". gano la Computadora.  Score: " + scoreComputer, Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Perdiste", Toast.LENGTH_LONG).show();
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
             finish();
